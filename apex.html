@@ -19,15 +19,15 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="web.html" class="logo">Portifólio Web</a>
+						<a href="apex.html" class="logo">Portifólio Oracle Apex</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">Portifólio Dados</a></li>
-							<li class="active"><a href="web.html">Portifólio Web</a></li>
-							<li><a href="apex.html">Portfólio Oracle Apex</a></li>
+							<li ><a href="web.html">Portifólio Web</a></li>
+							<li class="active"><a href="apex.html">Portfólio Oracle Apex</a></li>
 							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
 						</ul>
 						<ul class="icons">
@@ -44,20 +44,22 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<h1>ESSpotify</h1>
-									<p>Esse projeto foi feito em grupo, para a conclusão da disciplina de Engenharia de Software e Sistemas, do Centro de Informática da Universidade Federal de Pernambuco, e a idéia foi criar uma aplicativo de streaming de músicas.</p>
-									<p>O projeto está hospedado online, para acessar use as credenciais:  <p>login:teste@teste.com <br> senha:teste</p> e pode ser acessado <a href="https://esspotify.netlify.app/">clicando aqui</a></p>
+									<h1>Análise de desempenho de métodos de requisição do Google recaptcha.</h1>
+									<p>Esta é uma página que é composta por diversos gráficos, sobre esses gráficos foi feita uma análise do desempenho comparando dois métodos de requisição, visando definir se havia indicativos que poderia haver ganhos de performance ao alterar a função apex_web_service.make_rest_request, para a função de mais baixo nível.</p>
 								</header>
-								<div class="image main"><img src="images/loginEss.jpg" alt="" /></div>
-								<p>A divisão de tarefas dentro do grupo necessitava que cada integrante tivesse sua parte do projeto que estaria integrada, desde o levantamento de requisitos, prototipação no FIGMA, até a criação de testes de software.</p>
-								<div class="image main"><img src="images/ferramentas.jpg" alt="" /></div>
-								<p>Foi utilizada a biblioteca de Javascript ReactJS, e minhas features eram as de adicionar álbuns, e músicas, porém também fiz todos os componentes personalizados, pois preferimos utilizar o CSS básico.</p>
-								<div class="image main"><img src="images/cenarios.jpg" alt="" /></div>
-								<p>Para acessar a apresentação e o repositório original do projeto, use os botões abaixo.</p>
-								<ul class="actions special">
-									<li><a href="https://docs.google.com/presentation/d/1QzqT0g7JxBGrmmGrBsdq-ckDZYmHyDqNCq5wDXec1pw/edit?usp=sharing" class="button large">Ver Apresentação</a></li>
-									<li><a href="https://github.com/SamuelSimoes31/Esspotify" class="button large">Ver Código</a></li>
-								</ul>
+								<div class="image main"><img src="images/recaptcha.png" alt="" /></div>
+								<p>Existe um pacote que faz uma requisição ao Google recaptcha para renderizar o elemento e também validar o desafio de verificação de usuário humano, isso é aplicado em página públicas visando evitar o acesso indevido de robôs.</p>
+								<p>Esta verificação gerou uma certa demora em certos momentos, e surgiu a tarefa de analisar esses tempos, assim como, avaliar como solução uma função alternativa para verificar o desafio.</p>
+								<div class="image main"><img src="images/apexTela.png" alt="" /></div>
+								<p>Foi criado um procedimento que coletava 1000 amostras de requisição para cada função inserindo a o tempo de resposta em uma tabela, e a partir dessa tabela foram extraidos os dados para os gráficos dessa tela.</p>
+								<div class="image main">
+									<video width="100%" height="600" autoplay muted loop controls>
+										<source src="images/RecaptchaAnalysis.mp4" type="video/mp4">
+									</video>
+								</div>
+								<p>A partir da visualização das médias e desvios padrão dos tempos foi possivel concluir que não havia uma real vantagem de mudar a implementação, havia uma melhora de alguns milisegundos por requisição, mas também piorava a consistência, como pode ser vista pela análise do desvio padrão mostra.</p>
+								<p>Através dessa aplicação foi possivel treinar habilidades de análise de dados e estatística, além de exercitar os conhecimentos de criação de gráficos em Apex.</p>	
+							</ul>
 
 							</section>
 
